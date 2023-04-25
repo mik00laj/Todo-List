@@ -77,6 +77,7 @@ const createToolsArea = () => {
 const checkclick = e => {
 	if (e.target.matches('.complete')) {
 		e.target.closest('li').classList.toggle('completed')
+		e.target.classList.toggle('completed')
 	} else if (e.target.matches('.edit')) {
 		editTodo(e)
 	} else if (e.target.matches('.delete')) {
@@ -95,6 +96,7 @@ const deleteTodo = e => {
 	todoToEdit.remove()
 	if (document.getElementsByTagName('li').length === 0) {
 		errorInfo.textContent = 'Brak zadań na liście.'
+		errorInfo.style.color = 'rgb(2, 84, 161)'
 	} else {
 		errorInfo.textContent = ''
 	}
