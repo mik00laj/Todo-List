@@ -31,7 +31,7 @@ const prepareDOMEelements = () => {
 
 const prepareDOMEvents = () => {
 	addBtn.addEventListener('click', addNewTodo)
-	ulList.addEventListener('click', checkclick)
+	ulList.addEventListener('click', checkClick)
 	popupCloseBtn.addEventListener('click', closePopup)
 	popupAddBtn.addEventListener('click', changeTodoText)
 	todoInput.addEventListener('keydown', enterKeyCheck)
@@ -74,7 +74,7 @@ const createToolsArea = () => {
 	tools.append(btnDelete)
 }
 
-const checkclick = e => {
+const checkClick = e => {
 	if (e.target.matches('.complete')) {
 		e.target.closest('li').classList.toggle('completed')
 		e.target.classList.toggle('completed')
